@@ -1,0 +1,70 @@
+# kisswmrc
+# ~/.config/kisswm/kisswmrc
+#
+# Syntax:  M-key = action or command
+#   M / 4  = Super
+#   A      = Alt
+#   C      = Ctrl
+#   S      = Shift
+#
+# Hot-reload: kisswmctl reload
+
+# ── tags ──────────────────────────────────────────────────────────────
+tag = 9
+
+# ── programs ──────────────────────────────────────────────────────────
+M-q     = kitty
+M-e     = kitty -e yazi
+M-Return = firefox
+M-space = dmenu_run
+
+# ── window management ─────────────────────────────────────────────────
+M-w     = kill
+M-v     = float
+M-S-e   = quit
+M-g     = global
+M-S-r   = kisswmctl reload
+
+# ── focus ─────────────────────────────────────────────────────────────
+M-h     = focus-left
+M-l     = focus-right
+M-k     = focus-up
+M-j     = focus-down
+
+# ── swap (focus stays where you are) ──────────────────────────────────
+M-S-h   = swap-left
+M-S-l   = swap-right
+M-S-k   = swap-up
+M-S-j   = swap-down
+
+# ── tag switching ─────────────────────────────────────────────────────
+M-1     = tag-1
+M-2     = tag-2
+M-3     = tag-3
+M-4     = tag-4
+M-5     = tag-5
+M-6     = tag-6
+M-7     = tag-7
+M-8     = tag-8
+M-9     = tag-9
+
+# ── move window to tag ────────────────────────────────────────────────
+M-S-1   = move-1
+M-S-2   = move-2
+M-S-3   = move-3
+M-S-4   = move-4
+M-S-5   = move-5
+M-S-6   = move-6
+M-S-7   = move-7
+M-S-8   = move-8
+M-S-9   = move-9
+
+# ── media (XF86 — industry standard, as it should be) ─────────────────
+XF86-AudioMute         = pamixer -t
+XF86-AudioLowerVolume  = pamixer -d 5
+XF86-AudioRaiseVolume  = pamixer -i 5
+XF86-MonBrightnessDown = brightnessctl set 5%-
+XF86-MonBrightnessUp   = brightnessctl set +5%
+XF86-AudioPrev         = playerctl previous
+XF86-AudioPlay         = playerctl play-pause
+XF86-AudioNext         = playerctl next
